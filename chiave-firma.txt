@@ -1,0 +1,15 @@
+# Chiave pubblica con cui la piattaforma BSS firma gli estratti del registro
+#
+# Un estratto del registro (GET /api/v1/tec/registro-audit/estratto) porta una
+# firma Ed25519 e, per comodita, anche la chiave pubblica con cui verificarla.
+#
+# ⛔ NON fidarsi di quella: chi alterasse un estratto potrebbe rifirmarlo con
+#    una sua chiave e sostituirla. La chiave vera e questa, qui, in un archivio
+#    pubblico a sola aggiunta che non e la piattaforma: se quella nell'estratto
+#    non corrisponde a una di queste, l'estratto non viene da noi.
+#
+# Una riga per chiave: <dal> <chiave pubblica in esadecimale>.
+# Le chiavi vecchie NON si cancellano: un estratto firmato due anni fa si deve
+# poter verificare anche dopo un cambio di chiave.
+
+2026-11-20 2c9ab3f44baa23d56c8d73dd657747f487bf1f2df421bc878dd606b795d8299f
