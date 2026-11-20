@@ -1,0 +1,11 @@
+# Impronte del registro della piattaforma BSS
+#
+# Una riga per giorno: <giorno> <ultima riga del registro> <impronta>.
+# L'impronta è quella dell'ultima riga del registro di quel giorno, e ogni
+# riga del registro porta l'impronta della precedente: chi riscrivesse il
+# registro otterrebbe una catena di nuovo coerente con se stessa, ma non più
+# con le impronte pubblicate qui — che sono già uscite di lì.
+#
+# ⛔ Qui non c'è nessun dato: solo impronte, che non si possono aprire.
+# Per controllare: php artisan registro:verifica sulla piattaforma.
+
