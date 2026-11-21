@@ -13,3 +13,8 @@
 # poter verificare anche dopo un cambio di chiave.
 
 2026-11-20 2c9ab3f44baa23d56c8d73dd657747f487bf1f2df421bc878dd606b795d8299f
+# ⛔ REVOCATA il 2026-11-21: la chiave privata di questa riga e' finita in chiaro nel log di una
+#    sessione di lavoro. Gli estratti firmati con lei PRIMA del 2026-11-21 restano verificabili;
+#    un estratto con questa firma e data di generazione dal 2026-11-21 in poi NON e' da fidarsi:
+#    chi ha visto il log puo' firmare a nome nostro.
+2026-11-21 ef196570becf179cbe701bee89d5caf022917d7397c20ac2f36174a7056829bd
