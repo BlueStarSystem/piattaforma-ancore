@@ -5,16 +5,25 @@
 #
 # ⛔ NON fidarsi di quella: chi alterasse un estratto potrebbe rifirmarlo con
 #    una sua chiave e sostituirla. La chiave vera e questa, qui, in un archivio
-#    pubblico a sola aggiunta che non e la piattaforma: se quella nell'estratto
-#    non corrisponde a una di queste, l'estratto non viene da noi.
+#    pubblico a sola aggiunta che non e la piattaforma.
 #
-# Una riga per chiave: <dal> <chiave pubblica in esadecimale>.
-# Le chiavi vecchie NON si cancellano: un estratto firmato due anni fa si deve
-# poter verificare anche dopo un cambio di chiave.
+# Una riga per chiave:  <dal> <chiave pubblica in esadecimale> [revocata <data>]
+#
+# ⛔⛔ UNA CHIAVE «revocata» NON SI FIDA MAI, per nessun estratto, nemmeno per quelli
+#    che dichiarano una data anteriore: la data dentro un estratto la scrive chi
+#    lo firma, e chi ha la chiave trapelata puo' scrivere quella che vuole.
+#    Un estratto e valido solo se la sua chiave corrisponde a una riga NON revocata.
+#
+# ⭐ Il passato si verifica con le IMPRONTE GIORNALIERE (ancore.txt), che sono sha256
+#    e non dipendono da nessuna chiave: la catena del registro e la sua ancora di
+#    quel giorno bastano a dire se una riga e' quella di allora. La firma di un
+#    estratto dice solo «questo estratto lo ha prodotto la piattaforma», e solo
+#    finche' la chiave non e' revocata.
+#
+# Le righe NON si cancellano (la storia delle chiavi resta), ma una revoca si
+# scrive sulla riga stessa, leggibile da chi legge il file senza i commenti.
 
-2026-11-20 2c9ab3f44baa23d56c8d73dd657747f487bf1f2df421bc878dd606b795d8299f
-# ⛔ REVOCATA il 2026-11-21: la chiave privata di questa riga e' finita in chiaro nel log di una
-#    sessione di lavoro. Gli estratti firmati con lei PRIMA del 2026-11-21 restano verificabili;
-#    un estratto con questa firma e data di generazione dal 2026-11-21 in poi NON e' da fidarsi:
-#    chi ha visto il log puo' firmare a nome nostro.
+2026-11-20 2c9ab3f44baa23d56c8d73dd657747f487bf1f2df421bc878dd606b795d8299f revocata 2026-11-21
+# ^ la chiave privata e' finita in chiaro nel log di una sessione di lavoro.
+
 2026-11-21 ef196570becf179cbe701bee89d5caf022917d7397c20ac2f36174a7056829bd
