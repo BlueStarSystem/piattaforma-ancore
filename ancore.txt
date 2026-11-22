@@ -9,3 +9,4 @@
 # ⛔ Qui non c'è nessun dato: solo impronte, che non si possono aprire.
 # Per controllare: php artisan registro:verifica sulla piattaforma.
 
+2026-11-22 23 5d94727805c29694f9483615f12d7289b7945063156bb00e20e80a1cfe7b0e61
