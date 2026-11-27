@@ -26,4 +26,8 @@
 2026-11-20 2c9ab3f44baa23d56c8d73dd657747f487bf1f2df421bc878dd606b795d8299f revocata 2026-11-21
 # ^ la chiave privata e' finita in chiaro nel log di una sessione di lavoro.
 
-2026-11-21 ef196570becf179cbe701bee89d5caf022917d7397c20ac2f36174a7056829bd
+2026-11-21 ef196570becf179cbe701bee89d5caf022917d7397c20ac2f36174a7056829bd revocata 2026-11-27
+# ^ la chiave privata stava nel .env della macchina di produzione, copiato in chiaro dai backup del contenitore sulla condivisione di rete (fino al 27/11/2026): per prudenza la si considera esposta. Gli estratti gia' firmati con lei NON si fidano piu': si provano con le impronte giornaliere (ancore.txt).
+
+2026-11-27 71dab7fd9cd493d2726c3f7ba1e9f6734469885302ab2eade60b18fea0c7c9e2
+# ^ coppia nuova, generata il 27/11/2026; la privata sta solo nel .env della produzione (i backup del contenitore ora sono cifrati lato client).
